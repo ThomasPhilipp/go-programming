@@ -19,7 +19,6 @@ Go's standard library names are `fmt, log, math/rand` etc. A custom library most
 Go has a module system that makes using external packages easy. To use a new module, add it to your import path. Go will automatically download it when you build your code.
 
 ### Variable
-
 A variable holds data temporarily. When you declare a variable, it needs for things:
 
 1. a declaring statement: e.g. _var_
@@ -28,3 +27,36 @@ A variable holds data temporarily. When you declare a variable, it needs for thi
 4. an initial value:
 
 An example of declaring multiple variables at once is shown in `Chapter01/Exercise01.03`. In `Chapter01/Exercise01.04`, there is an example of a short variable declaration, where the type or an initial value is omitted. Only in a function, there is also another shorthand variant available by omitting also the `var` keyword and inferring its data type. The `:=` example is shown in `Chapter01/Exercise01.05`. Another shortcut is declaring multiple variables on the same line as shown in  `Chapter01/Exercise01.06`.
+
+#### Zero Values
+Go defines the following zero values for all core types:
+
+* bool: `false`
+* numbers (integer and float): `0`
+* string: `` (empty)
+* pointer, function, interface, slice, etc.: `nil`
+
+#### Formatting
+Go uses a template language to transform passed values to show a variable's value and/or type by using `fmt.Printf`.
+
+* `%v`: any value
+* `%+v`: value with extra information, such as struct field names
+* `%#v`: Go syntax
+* `%T`: print the variable's type
+* `%d`: decimal (base 10)
+* `%s`: string
+
+Examples are shown in `Chapter01/Exercise01.12`.
+
+### Operators
+There are various groups of operators:
+
+* Arithmetic operators: addition, subtraction, and multiplication
+* Comparison operators: equal, not equal, less than, or greater than
+* Logical operators: used with boolean values
+* Address operators: pointers
+* Receive operators: Go channels
+
+Their usage is shown in `Chapter01/Exercise01.09`. For joining multiple `string` you can use the `+` symbol. Also, a number of shorthand operators exists: `--`, `++`, `+=`, `-=`. 
+
+
