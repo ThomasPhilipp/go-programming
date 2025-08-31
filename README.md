@@ -6,15 +6,16 @@ The project's content based on the book - _Go-Programming - From Beginner to Pro
 
 It covers the following sections:
 
-- [ ] Chapter 1: Variables and Operators
-- [ ] Chapter 2: Command and Control
-- [ ] Chapter 3: Core Types
-- [ ] Chapter 4: Complex Types
-- [ ] Chapter 5: Functions
-- [ ] Chapter 6: Don't Panic
-- [ ] Chapter 7: Interfaces
-- [ ] Chapter 8: Generic Algorithm Superpowers
-- [ ] Chapter 9: Mo Modules
+- [ ] Chapter 00: Code Snippets
+- [x] Chapter 01: Variables, Operators, Constants and Enums
+- [ ] Chapter 02: Command and Control
+- [ ] Chapter 03: Core Types
+- [ ] Chapter 04: Complex Types
+- [ ] Chapter 05: Functions
+- [ ] Chapter 06: Don't Panic
+- [ ] Chapter 07: Interfaces
+- [ ] Chapter 08: Generic Algorithm Superpowers
+- [ ] Chapter 09: Mo Modules
 - [ ] Chapter 10: Packages
 - [ ] Chapter 11: Debugging
 - [ ] Chapter 12: Time
