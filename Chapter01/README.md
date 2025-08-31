@@ -36,6 +36,21 @@ Go defines the following zero values for all core types:
 * string: `` (empty)
 * pointer, function, interface, slice, etc.: `nil`
 
+### Pointer
+
+The various variants to define a pointer are shown in `Chapter01/Exercise01.13`. Their dereferences and printed values are shown in `Chapter01/Exercise01.14`.
+
+#### Variable vs. Pointer
+A variable such as int, bool, and string, gets copied when you pass it to a function. This simplifies the memory management in Go a lot, which is called _stack_. The downside is that copying uses more memory. The alternative that uses less memory by passing a value is called a _pointer_. A pointer is the address of a value. When creating a pointer to a value, Go can't manage the value's memory using the stack. Instead, Go puts the value on the _heap_, which is then garbage collected when not needed anymore.
+
+The memory usage of a pointer compared to a variable which is copied is clear. Its CPU usage is not. When a value gets copied, Go needs CPU cycles to get that memory and then release it later. Using a pointer avoids this CPU usage when passing it to a function, but means that its garbage collection process is more complex - e.g. when having a lot of values on the heap. This process can become a CPU bottleneck when checking its usage, which uses up CPU cycles.
+
+Sometimes, using pointers allows for a cleaner interface and simplified code but can be dangerous if misused, e.g. dangling pointer. But they are also less error-prone compared to other languages such as C.
+
+If you have a pointer variable or pass it to a function, any changes that are made to the value of the variable also affect the value of the variable outside of the function.
+
+An example of functions using a variable and a pointer is shown in `Chapter01/Exercise01.15`.
+
 #### Formatting
 Go uses a template language to transform passed values to show a variable's value and/or type by using `fmt.Printf`.
 
