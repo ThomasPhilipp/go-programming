@@ -74,4 +74,8 @@ There are various groups of operators:
 
 Their usage is shown in `Chapter01/Exercise01.09`. For joining multiple `string` you can use the `+` symbol. Also, a number of shorthand operators exists: `--`, `++`, `+=`, `-=`. 
 
+### Constants
+Constants are like variables, but you can't change their initial values. Their declarations are similar to `var` statements but an initial value is required. Types ar optional and interred if left out. An example of its usage shown in `Chapter01/Exercise01.16`.
 
+### Enums
+Enums are a way of defining a fixed list of values that are all related. Go does not have a built-in type for enums, but it does provide tools such as `iota`, which assigns numbers to constants.
