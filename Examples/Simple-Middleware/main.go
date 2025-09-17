@@ -8,6 +8,8 @@ import (
 
 // Example of a middleware, which execute on all incoming requests regardless
 // of the destination function. In that case the start and stop time is logged.
+// Other examples of using a middleware is for authenticating and authorizing
+// users and mapping resources. An alternative package is "negroni".
 
 // The logger type implements the http.Handler interface but also contains an
 // Inner, which is a http.Handler itself

@@ -9,6 +9,9 @@ import (
 // the URL path. The implemented resources are: "/a", "/b", etc. If no matching
 // resource is found, a "404" is returned.
 //
+// A more powerful package for routing is: "gorilla/mux", which provides also
+// routing based on regex, parameter or verb matching as well as sub routing.
+//
 // Source: https://github.com/blackhat-go/bhg/tree/master/ch-4/simple_router
 
 // The router type implements the http.Handler interface

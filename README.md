@@ -34,6 +34,7 @@ It covers the following sections:
 It covers:
 
 - [x] Networking: echo server, TCP scanner, proxy, netcat / unauthorized remote access
+- [x] HTTP: server, router, middleware
 - [ ] I/O
 - [ ] Concurrency
 
