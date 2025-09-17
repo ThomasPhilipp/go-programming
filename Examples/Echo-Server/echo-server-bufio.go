@@ -24,7 +24,7 @@ func echo(conn net.Conn) {
 	}
 	writer.Flush()
 
-	// Alternative approach: simply use the io.Copy function! See also Example-IO.
+	// Alternative approach: simply use the io.Copy function! See also IO.
 }
 
 // Echo server simply replies to all socket-request using the net.Conn type,
