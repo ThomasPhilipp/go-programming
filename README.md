@@ -29,5 +29,13 @@ It covers the following sections:
 - [ ] Chapter 20: Go Tools
 - [ ] Chapter 21: Go in the Cloud
 
+## Examples
+
+It covers:
+
+- [x] Networking: echo server, TCP scanner, proxy, netcat / unauthorized remote access
+- [ ] I/O
+- [ ] Concurrency
+
 ## References
 * Go-Programming - From Beginner to Professional (2nd Edition) [Book](https://subscription.packtpub.com/book/programming/9781803243054/) [Github](https://github.com/PacktPublishing/Go-Programming-From-Beginner-to-Professional-Second-Edition-)
