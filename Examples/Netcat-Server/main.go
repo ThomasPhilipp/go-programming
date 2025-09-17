@@ -14,6 +14,8 @@ import (
 // The example allows a remote client to interact with the shell as if they
 // were on a local machine which is a security risk but most often used for
 // penetration testing, malware or backdoors to gain unauthorized access.
+//
+// Source: https://github.com/blackhat-go/bhg/blob/master/ch-2/netcat-exec/main.go
 
 func handle(conn net.Conn) {
 	// Creates the Shell process

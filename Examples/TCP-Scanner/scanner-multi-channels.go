@@ -6,7 +6,7 @@ import (
 	"sort"
 )
 
-// See also https://github.com/blackhat-go/bhg/tree/master/ch-2
+// Source: https://github.com/blackhat-go/bhg/blob/master/ch-2/tcp-scanner-final/main.go
 
 func worker(ports, results chan int) {
 	for p := range ports {

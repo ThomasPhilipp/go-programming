@@ -6,6 +6,8 @@ import (
 	"net"
 )
 
+// Source: https://github.com/blackhat-go/bhg/blob/master/ch-2/echo-server/main.go
+
 func echo(conn net.Conn) {
 	defer conn.Close()
 

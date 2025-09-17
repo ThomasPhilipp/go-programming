@@ -6,6 +6,8 @@ import (
 	"net"
 )
 
+// Source:
+
 func handle(src net.Conn) {
 	dst, err := net.Dial("tcp", "joescatcam.website:80")
 	if err != nil {

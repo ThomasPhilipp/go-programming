@@ -31,14 +31,17 @@ type BasicAuth struct {
 }
 
 func (b *BasicAuth) ServeHTTP(w http.ResponseWriter, r *http.Request, next http.HandlerFunc) {
+	// Grabs username and password from the request
 	username := r.URL.Query().Get("username")
 	password := r.URL.Query().Get("password")
 
+	// Compares username and password with the stored once
 	if username != b.Username || password != b.Password {
 		http.Error(w, "Unauthorized", 401)
 		return
 	}
 
+	// Adding username to the request context for
 	ctx := context.WithValue(r.Context(), "username", username)
 	r = r.WithContext(ctx)
 
@@ -46,7 +49,9 @@ func (b *BasicAuth) ServeHTTP(w http.ResponseWriter, r *http.Request, next http.
 }
 
 func hello(w http.ResponseWriter, r *http.Request) {
+	// Reads the value from the request context to display it
 	username := r.Context().Value("username").(string)
+	// Writes the custom response
 	fmt.Fprintf(w, "Hi %s\n", username)
 }
 

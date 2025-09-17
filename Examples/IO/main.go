@@ -6,6 +6,8 @@ import (
 	"os"
 )
 
+// Source: https://github.com/blackhat-go/bhg/blob/master/ch-2/io-example/main.go
+
 // FooReader defines an io.Reader
 type FooReader struct{}
 
