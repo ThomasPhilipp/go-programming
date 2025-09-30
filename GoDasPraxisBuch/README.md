@@ -59,7 +59,7 @@ func (r *rectangle) setLength(l int) {
 }
 ```
 
-
+Ein Array hat immer eine fixe Größe. Im Gegensatz dazu gibt es ein Slice, das eine flexible Größe aufweist. Die Basis eines Slice ist jedoch ein Array, da ein Slice einen Pointer auf ein Array besitzt. Die Größe des Slices ist die `length` und erfasst die Anzahl der Elemente im Slice. Die Größe des Arrays wird über die `capacity` ausgelesen.
 
 
 ## Referenzen
