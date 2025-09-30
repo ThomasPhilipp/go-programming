@@ -5,14 +5,33 @@ import "fmt"
 // Beispiel für einen Pointer
 
 func main() {
-	var number int
-	var pointer *int // Type: Pointer to int
+	fmt.Println("--- simpleUsage ---")
+	simpleUsage()
 
-	number = 7
-	pointer = &number // Get memory address "&"
+	fmt.Println("--- functionUsage ---")
+	functionUsage()
+}
 
-	fmt.Println("Initial: ", number, pointer)
+func simpleUsage() {
+	var num int
+	var numPointer *int // Type: Pointer to int
 
-	*pointer = 14 // Read or change value of a variable -> "*" aka dereference
-	fmt.Println("Changed: ", number, pointer)
+	num = 7
+	numPointer = &num // Get memory address "&"
+
+	fmt.Println("Initial value: ", num, numPointer)
+
+	*numPointer = 14 // Read or change value of a variable -> "*" aka dereference
+	fmt.Println("Changed value: ", num /*value*/, numPointer /*pointer address*/)
+}
+
+func functionUsage() {
+	foo := foo()
+	fmt.Println("Initial value: ", foo /*pointer address*/, *foo /*value*/)
+}
+
+// Returns a pointer
+func foo() *int {
+	a := 111
+	return &a
 }
