@@ -41,6 +41,27 @@ Neben Variable und Konstanten, stellen insbesondere Pointer eine Besonderheit da
 
 Lokale Variablen werden idR nach dem Funktionsaufruf innerhalb der Arbeitsspeichers wieder gelöscht. 
 
+Eine `defer`Anweisung wird immer nach der Funktion ausegeführt, egal ob die Funktion durch ihr Ende, ein Return, oder eine Panik beendet wird.
+
+Obwohl es in Go keine echten Klassen und Objekte gibt, ist objektorientierte Programmierung teilweise möglich. In Go gibt es programmieren gegen Schnittstellen, sowie die Objektkomposition (jedoch keine Vererbung). Dabei unterscheiden sich Methoden von Funktionen nur minimal, indem der Parameter des Types einfach vor dem Methodennamen gezogen wird.
+
+```
+func (r rectangle) area() int {
+    return r.length * r.width
+}
+```
+
+bzw:
+
+```
+func (r *rectangle) setLength(l int) {
+    r.length * l
+}
+```
+
+
+
+
 ## Referenzen
 * Go – Das Praxisbuch: Einstieg in Go und das Go-Ökosystem (1. Auflage 2020) [Book](https://subscription.packtpub.com/book/programming/9781803243054/) [Github](https://github.com/gobuch/code)
 * Effective Go [Link](https://go.dev/doc/effective_go)
