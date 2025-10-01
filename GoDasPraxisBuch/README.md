@@ -61,6 +61,20 @@ func (r *rectangle) setLength(l int) {
 
 Ein Array hat immer eine fixe Größe. Im Gegensatz dazu gibt es ein Slice, das eine flexible Größe aufweist. Die Basis eines Slice ist jedoch ein Array, da ein Slice einen Pointer auf ein Array besitzt. Die Größe des Slices ist die `length` und erfasst die Anzahl der Elemente im Slice. Die Größe des Arrays wird über die `capacity` ausgelesen.
 
+Neben der `if` Anweisung steht auch ein `switch` bereit, das sehr flexibel ist, wie in `Kapitel 2.16` gezeigt. Es muss kein `break` in eine `case` geben und innerhalb einer `case` Anweisung können wir auch mehrere Fälle auswerten. Die `default` Anweisung darf in beliebiger Position stehen. Sollte ein `break` jedoch definiert sein, wird die Anweisung an dieser Stelle beendet. Normalerweise wird die am Ende eines `case` Blocks die Anweisung beendet. Wollen wir das Verhalten überschreiben, können wir eine `fallthrough` Anweisung definieren, um weitere `case` Blöcke zu prüfen.
+
+In Go gibt es nur die `for` Schleife, die ebenfalls sehr flexibel ist. Sie kann auch ohne Anweisung definiert werden. Mit `break` wird die Schleife abgebrochen. Mit `continue` wird sie zur nächsten Iterator springen. Oftmals wird eine Schleife auch in Verbindung mit `range` verwendet:
+
+```
+list := []string{"one", "two", "three"}
+for i, v := range list {
+    ...
+}
+```
+
+Die `goto <label>` Funktion dient zum Springen zu einem Label. Dadurch wird der Code aber schwerer zu lesen. Ähnlich kann auch mit einem `continue <label>` gesprungen werden.
+
+In Go wird jeder Text als UTF-8 codiert. Dadurch gibt es keine Probleme mit Umlauten oder asiatischen Zeichen. Ein String besteht aus mehreren Unicode-Zeichen. Pro Zeichen werden dafür bis zu 4 Bytes benötigt. D.h. Unicode-Zeichen sind bezüglich des Speicherbedarfs flexibel. Deshalb ist ein `string` ein Alias für `[]byte`, der jedoch in UTF-8 codiert ist. Ein Iterieren über einen String zeigt als Index das erste Byte des Zeichens an und der Value beinhaltet das Zeichen als `rune` (=`uint32`) Typ. 
 
 ## Referenzen
 * Go – Das Praxisbuch: Einstieg in Go und das Go-Ökosystem (1. Auflage 2020) [Book](https://subscription.packtpub.com/book/programming/9781803243054/) [Github](https://github.com/gobuch/code)
